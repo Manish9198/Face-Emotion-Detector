@@ -1,0 +1,67 @@
+.emotion-detector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #9f63e8, #1a1a1a);
+    color: #e0eae4;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 640px;
+    max-width: 90%;
+    aspect-ratio: 25 / 16;
+    border: 5px solid #6c6ee8;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 0 20px rgba(133, 84, 219, 0.4);
+}
+
+video, canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status-indicator {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #31e369;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #666;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.status-dot.active {
+    background-color: #13e124;
+}
+
+.error-message {
+    background-color: #ff5252;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 82, 82, 0.7);
+} 
